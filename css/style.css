@@ -32,10 +32,10 @@ body {
 }
 
 .recipe-card {
-    max-width: 700px;
+    max-width: 750px;
     margin: 0 auto;
     background-color: var(--bg-color-secondary);
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
@@ -45,7 +45,7 @@ body {
     height: auto;
     display: block;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 40px;
     border-radius: 10px;
 }
 
@@ -56,7 +56,7 @@ body {
 h1 {
     color: var(--font-color-black);
     font-family: 'Young Serif';
-    letter-spacing: 0.5px;
+    letter-spacing: 0px;
     margin-bottom: 20px;
     font-weight: 400;
 }
@@ -66,23 +66,22 @@ h2{
     color: var(--font-color-brown);
     font-weight: inherit;
     font-size: 28px;
-    margin-bottom: 20px;
     margin-top: 20px;
 }
 
 p {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: var(--font-color-grey);
+    font-size: 16px;
 }
 
 
 .prep-time{
     background-color: var(--bg-color-thrid);
     border-radius: 10px;
-    margin: 0 auto;
 }
 .prep-time-info{
-    padding: 15px;
+    padding: 15px 30px;
 }
 
 .prep-time h2{
@@ -90,16 +89,17 @@ p {
     font-size: 20px;
     font-family: 'Outfit', sans-serif;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.prep-time ul li{
-    margin-left: 50px;
+.prep-time ul{
+    list-style-position: outside;
     color: var(--font-color-grey);
+    padding: 0 20px;
 }
 
-.ingredients{
-    border-bottom: 1px var(--font-color-grey-1) solid;
-    margin-top: 20px;
+.prep-time ul li::marker{
+    color: var(--font-color-rose);
 }
 
 .ingredients h2{
@@ -107,18 +107,17 @@ p {
     color: var(--font-color-brown);
     font-weight: inherit;
     font-size: 28px;
-    margin-bottom: 10px;
+    margin:30px 0px;
 }
 
-.ingredients ul li{
-    margin-left: 25px;
+.ingredients ul{
     color: var(--font-color-grey);
-    margin-bottom: 20px;
+    margin-left: 25px;
 }
 
-
-.instructions{
-    border-bottom: 1px var(--font-color-grey-1) solid;
+.ingredients ul li::marker{
+    color: var(--font-color-brown);
+    margin-bottom: 20px;
 }
 
 .instructions h2{
@@ -126,25 +125,31 @@ p {
     color: var(--font-color-brown);
     font-weight: inherit;
     font-size: 28px;
-    margin-bottom: 10px;
+    margin:30px 0px;
 }
 
-.instructions ol li{
+.instructions ol{
     margin-left: 25px;
     color: var(--font-color-grey);
     margin-bottom: 10px;
 }
 
-ul, ol {
-    margin-bottom: 20px;
+.instructions ol li::marker{
+    color: var(--font-color-brown);
+    font-weight: bold;
 }
 
 ul li, ol li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    padding: 0px 20px;
 }
 
 strong {
     font-weight: bold;
+}
+
+.nutrition h2{
+    margin-bottom: 20px;
 }
 
 table {
@@ -156,7 +161,6 @@ table {
 th, td {
     padding: 8px;
     text-align: left;
-    border-bottom: 1px solid var(--font-color-grey-1);
 }
 
 span{
@@ -164,6 +168,43 @@ span{
     font-weight: bold;
 }
 
+.line{
+    border-bottom: 1px solid var(--font-color-grey-1);
+    margin-top: 40px;
+}
+
+.attribution{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.attribution a{
+    text-decoration: none;
+    color: var(--font-color-grey);
+}
+
+.attribution a:hover{
+    color: var(--font-color-brown);
+    text-decoration:underline;
+}
+@media only screen and (max-width:375px){
+    body{
+        width: 375px;
+        padding: 0;
+        background-color: var(--bg-color-secondary);
+    }
+    .recipe-card{
+        border-radius: 0px;
+        margin: 0 auto;
+    }
+    .recipe-image img{
+        width: 100%;
+        height: auto;
+        margin-top: 0px;
+    }
+
+}
 
 
 
