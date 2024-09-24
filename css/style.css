@@ -161,6 +161,7 @@ table {
 th, td {
     padding: 8px;
     text-align: left;
+    font-weight: 400;
 }
 
 span{
